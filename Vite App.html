@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:5173/ -->
+<html lang=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <script type="module" src="./Vite App_files/client"></script>
+
+    
+    <link rel="icon" href="http://localhost:5173/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  <style type="text/css" data-vite-dev-id="D:/信息检索系统原理/hw4/nankai-search-ui/src/App.vue?vue&amp;type=style&amp;index=0&amp;scoped=7a7a37b1&amp;lang.css">
+.search-container[data-v-7a7a37b1] {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #333;
+}
+.snapshot-modal[data-v-7a7a37b1] {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+.snapshot-dialog[data-v-7a7a37b1] {
+  width: 80%;
+  max-width: 900px;
+  height: 80vh;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+.snapshot-header[data-v-7a7a37b1] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f2f3f5;
+  border-bottom: 1px solid #e5e6eb;
+}
+.snapshot-header h3[data-v-7a7a37b1] {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #1d2129;
+}
+.close-btn[data-v-7a7a37b1] {
+  background: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+.close-btn[data-v-7a7a37b1]:hover {
+  background: #d9363e;
+}
+.snapshot-body[data-v-7a7a37b1] {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+  background: #1e1e1e;
+  color: #d4d4d4;
+}
+.snapshot-body pre[data-v-7a7a37b1] {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.logo[data-v-7a7a37b1] {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #165DFF;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+.search-box-wrapper[data-v-7a7a37b1] {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  margin-bottom: 20px; /* 调整间距容纳单选按钮 */
+}
+.capsule-input[data-v-7a7a37b1] {
+  width: 60%;
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  border: 2px solid #e5e6eb;
+  border-radius: 999px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.capsule-input[data-v-7a7a37b1]:focus {
+  border-color: #165DFF;
+  box-shadow: 0 0 0 4px rgba(22, 93, 255, 0.1);
+}
+.capsule-btn[data-v-7a7a37b1] {
+  padding: 0 30px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #165DFF;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.capsule-btn[data-v-7a7a37b1]:hover {
+  background-color: #1453e0;
+}
+
+/* 搜索模式切换 UI */
+.search-modes[data-v-7a7a37b1] {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+.mode-label[data-v-7a7a37b1] {
+  padding: 6px 16px;
+  font-size: 0.9rem;
+  color: #4e5969;
+  background-color: #f2f3f5;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.mode-label input[data-v-7a7a37b1] {
+  display: none; /* 隐藏原生单选框 */
+}
+.mode-label[data-v-7a7a37b1]:hover {
+  background-color: rgba(22, 93, 255, 0.1);
+  color: #165DFF;
+}
+.mode-label.active[data-v-7a7a37b1] {
+  background-color: #165DFF;
+  color: #fff;
+}
+.suggest-glass-panel[data-v-7a7a37b1] {
+  position: absolute;
+  top: 60px;
+  width: 60%;
+  left: 50%;
+  transform: translateX(-54%);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 100;
+}
+.suggest-item[data-v-7a7a37b1] {
+  padding: 12px 25px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.suggest-item[data-v-7a7a37b1]:hover {
+  background: rgba(22, 93, 255, 0.1);
+  color: #165DFF;
+}
+.history-section[data-v-7a7a37b1] {
+  margin-bottom: 40px;
+}
+.history-tags[data-v-7a7a37b1] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+.capsule-tag[data-v-7a7a37b1] {
+  padding: 6px 16px;
+  background: #f2f3f5;
+  color: #4e5969;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.capsule-tag[data-v-7a7a37b1]:hover {
+  background: rgba(22, 93, 255, 0.1);
+  color: #165DFF;
+}
+.result-card[data-v-7a7a37b1] {
+  padding: 20px 0;
+  border-bottom: 1px solid #e5e6eb;
+}
+.result-title[data-v-7a7a37b1] {
+  font-size: 1.25rem;
+  color: #165DFF;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+}
+.result-title[data-v-7a7a37b1]:hover {
+  text-decoration: underline;
+}
+.result-desc[data-v-7a7a37b1] {
+  font-size: 0.95rem;
+  color: #4e5969;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.result-meta[data-v-7a7a37b1] {
+  display: flex;
+  gap: 15px;
+  font-size: 0.85rem;
+}
+.meta-tag[data-v-7a7a37b1] {
+  color: #165DFF;
+  background: rgba(22, 93, 255, 0.1);
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.meta-date[data-v-7a7a37b1] {
+  color: #86909c;
+}
+</style></head>
+  <body>
+    <div id="app" data-v-app=""><div data-v-7a7a37b1="" class="search-container"><div data-v-7a7a37b1="" class="header"><h1 data-v-7a7a37b1="" class="logo">南开搜索</h1><div data-v-7a7a37b1="" class="search-box-wrapper"><input data-v-7a7a37b1="" type="text" class="capsule-input" placeholder="探索校园万象..."><button data-v-7a7a37b1="" class="capsule-btn">搜索</button><!--v-if--></div><div data-v-7a7a37b1="" class="search-modes"><label data-v-7a7a37b1="" class="mode-label"><input data-v-7a7a37b1="" type="radio" value="basic"> 站内查询 </label><label data-v-7a7a37b1="" class="mode-label"><input data-v-7a7a37b1="" type="radio" value="document"> 文档查询 </label><label data-v-7a7a37b1="" class="mode-label"><input data-v-7a7a37b1="" type="radio" value="phrase"> 短语查询 </label><label data-v-7a7a37b1="" class="mode-label active"><input data-v-7a7a37b1="" type="radio" value="wildcard"> 通配查询 </label></div></div><!--v-if--><div data-v-7a7a37b1="" class="results-section"><div data-v-7a7a37b1="" class="result-card"><a data-v-7a7a37b1="" href="https://cc-backend.nankai.edu.cn/contact/email" target="_blank" class="result-title">计算机学院-南开大学</a><p data-v-7a7a37b1="" class="result-desc">首页导航 首 页 学院概况 学院概况 学院领导 学院党委 组织结构 学科学术分委会 学位评定分委会 教代会、公会委员会 专业技术职务评审分委员会 学科建设 学科结构 计算机科学与技术学科 师资队伍 教授/研究员 副教授/副研究员 讲师 实验教学队伍 博士后 兼职教授 招聘信息 信息检索 人才培养 本科教育 研究生教育 硕士生导师 博士生导师 科学研究 系所中心 学术团队 国际交流 合作院校分布 联合培养项目 新闻中心 最新动态 学院公告 学生工作通知 科研信息 本科生教学 党团园地 研究生招生 研究生教学 就业信息 联系我们 机构设置 院长信箱 联系我们 机构设置 学院直属办公室 计算机科学与技术系 公共计算机基础教学部 实验教学中心 院长信箱 院长信箱 nkcce@nankai.edu.cn nkucsts@163.com（本科教学） 天津市津南区海河教育园同砚路38号 邮编：300350 南开大学计算机学院 错误与BUG反馈处！ Copyright © 2018 - 2026 南开大学计算机学院. All Rights Reserved &nbsp;&nbsp;
+            浏览次数: 1459888</p><div data-v-7a7a37b1="" class="result-meta"><span data-v-7a7a37b1="" class="meta-tag">网页文本缓存</span><span data-v-7a7a37b1="" class="meta-date">近期发布</span></div></div><div data-v-7a7a37b1="" class="result-card"><a data-v-7a7a37b1="" href="https://yzb.nankai.edu.cn/2024/1017/c2561a553268/page.htm" target="_blank" class="result-title">2025年博士招生专业目录--(035)计算机学院 (联系电话：23503438)</a><p data-v-7a7a37b1="" class="result-desc">收藏本站 导航 首页 硕士招生 博士招生 港澳台研究生招生 留学研究生招生 院系信息 师生风采 联系我们 2025年博士招生专业目录--(035)计算机学院 (联系电话：23503438) 时间：2024-10-19 浏览： 12 专业代码、名称 及研究方向 指导教师 学习方式 招生计划 考试科目 备注 42 其中包括学术学位博士招生计划23个，专业学位博士招生计划19个；含网络空间安全学院招生计划。 081200计算机科学与技术 01计算机视觉 程明明 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 范登平 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 宫晓利 全日制 ①1001英语②2171算法设计与分析③3171网络技术 03计算机系统 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 侯淇彬 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 04算法图论及应用 黄申为 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 李涛 全日制 ①1001英语②2171算法设计与分析③3171网络技术 05异构计算 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 李翔 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 06并行与分布式系统 李雨森 全日制 ①1001英语②2171算法设计与分析③3171网络技术 07计算机系统结构 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 李重仪 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 刘健 全日制 ①1001英语②2171算法设计与分析③3171网络技术 08生物信息学 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 刘夏雷 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 06并行与分布式系统 刘晓光 全日制 ①1001英语②2171算法设计与分析③3171网络技术 09并行技术与应用 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 卢冶 全日制 ①1001英语②2171算法设计与分析③3171网络技术 10体系结构 ①1001英语②2171算法设计与分析③3171网络技术 11未来网络架构与边缘计算 蒲凌君 全日制 ①1001英语②2171算法设计与分析③3171网络技术 12语音信号处理 秦勇 全日制 ①1001英语②2171算法设计与分析③3171网络技术 13人机交互技术 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 任博 全日制 ①1001英语②2171算法设计与分析③3171网络技术 14计算机图形学 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 邵秀丽 全日制 ①1001英语②2171算法设计与分析③3171网络技术 15软件工程 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 沈玮 全日制 ①1001英语②2171算法设计与分析③3171网络技术 16数据挖掘 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 宋春瑶 全日制 ①1001英语②2171算法设计与分析③3171网络技术 16数据挖掘 ①1001英语②2171算法设计与分析③3171网络技术 09并行技术与应用 王刚 全日制 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 王亚星 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 08生物信息学 卫金茂 全日制 ①1001英语②2171算法设计与分析③3171网络技术 17机器学习 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 温延龙 全日制 ①1001英语②2171算法设计与分析③3171网络技术 18数据库系统实现技术 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 杨巨峰 全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 18数据库系统实现技术 袁晓洁 全日制 ①1001英语②2171算法设计与分析③3171网络技术 19大数据分析处理 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 张莹 全日制 ①1001英语②2171算法设计与分析③3171网络技术 20自然语言处理 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 张金 全日制 ①1001英语②2171算法设计与分析③3171网络技术 03计算机系统 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 周宇 全日制 ①1001英语②2171算法设计与分析③3171网络技术 21多模态人工智能 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 张文生 全日制 ①1001英语②2171算法设计与分析③3171网络技术 兼职博导 085404计算机技术 01计算机视觉 程明明 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 范登平 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 03计算机系统 宫晓利 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 04人工智能新技术 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 侯淇彬 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 05算法图论及应用 黄申为 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 李涛 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 06异构计算 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 李翔 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 07并行与分布式系统 李雨森 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 08计算机系统结构 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 李重仪 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 刘健 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 09生物信息学 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 刘夏雷 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 07并行与分布式系统 刘晓光 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 10并行技术及应用 ①1001英语②2171算法设计与分析③3171网络技术 11体系结构 卢冶 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 12区块链 ①1001英语②2171算法设计与分析③3171网络技术 13未来网络架构与边缘计算 蒲凌君 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 14语音信号处理 秦勇 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 15人机交互技术 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 任博 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 16计算机图形学 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 邵秀丽 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 17软件工程 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 沈玮 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 18数据挖掘 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 宋春瑶 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 18数据挖掘 ①1001英语②2171算法设计与分析③3171网络技术 10并行技术及应用 王刚 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 王亚星 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 温延龙 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 19数据库系统实现技术 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 杨巨峰 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 ①1001英语②2171算法设计与分析③3171网络技术 19数据库系统实现技术 袁晓洁 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 张莹 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 20自然语言处理 ①1001英语②2171算法设计与分析③3171网络技术 03计算机系统 张金 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 04人工智能新技术 ①1001英语②2171算法设计与分析③3171网络技术 01计算机视觉 周宇 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 21多模态人工智能 ①1001英语②2171算法设计与分析③3171网络技术 02人工智能 张文生 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 兼职博导 02人工智能 王恺 全日制/非全日制 ①1001英语②2171算法设计与分析③3171网络技术 天津市卫津路94号（300071)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您是来自 的第 12 位访客 Copyright 2014 © Nankai University. All rights reserved 返回 原图 /</p><div data-v-7a7a37b1="" class="result-meta"><span data-v-7a7a37b1="" class="meta-tag">网页文本缓存</span><span data-v-7a7a37b1="" class="meta-date">近期发布</span></div></div><div data-v-7a7a37b1="" class="result-card"><a data-v-7a7a37b1="" href="https://graduate.nankai.edu.cn/2025/1027/c83a582283/page.htm" target="_blank" class="result-title">2026年博士招生专业目录--(035)计算机学院(联系电话：23503438)</a><p data-v-7a7a37b1="" class="result-desc">首页 本院简介 八里台校区师生服务中心 津南校区行政中心 组织机构 院领导介绍 本院简介 招生工作 学历教育招生 培养管理 管理文件 业务流程 培养方案 学籍管理 专业学位 教学管理 课程建设 创新工程 在线教育平台 国际交流 南开大学—格拉斯哥大学联合研究... 高水平大学国家公派研究生项目（... 校际交流项目 日常管理规定 南开大学与澳大利亚弗林德斯大学... 南开大学与哈萨克斯坦欧亚国立大... 学科建设 重点学科 学科授权点 管理规定 学位授权点年度质量报告 导师名单 学位管理 通知事项 学位评定委员会 申请毕业（学位）流程 科研成果规定 优秀硕博论文 学位授权点合格评估 同等学力 资料下载 英文版(调试) 院长信箱 当前位置： 首页 招生信息 招生信息 最新动态 更多&gt;&gt; ◆ 深化国际协同 共筑育人新篇 ◆ 关于2026年同等学力人员申请硕士学... ◆ ​南开大学张雅敏教授入选中国研究... ◆ 科学网：南开大学研究团队拓展自旋... ◆ 2026年首场总理座谈会南开教授建言... ◆ 新时代中外合作办学教育成果交流研... 学历/在学证明 学位证明英文版 毕业答辩及盲审 论文写作规范 回国及联合培养 2026年博士招生专业目录--(035)计算机学院(联系电话：23503438) 发布者：研究生院　　发布时间：2025-10-27　　浏览次数： 345 地址：天津市南开区卫津路94号 邮编：300071 南开大学研究生教育 南-格联合研究生院 南开大学研究生院版权所有　津教备0061号　津ICP备12003308号-1　您是自2015年4月16日的第 位访客</p><div data-v-7a7a37b1="" class="result-meta"><span data-v-7a7a37b1="" class="meta-tag">网页文本缓存</span><span data-v-7a7a37b1="" class="meta-date">近期发布</span></div></div></div><!--v-if--></div></div>
+    <script type="module" src="./Vite App_files/main.js.下载"></script>
+  
+
+</body></html>

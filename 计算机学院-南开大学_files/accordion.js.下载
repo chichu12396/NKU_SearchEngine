@@ -1,0 +1,61 @@
+$(function () {
+    var Accordion = function (el, multiple) {
+        this.el = el || {};
+        this.multiple = multiple || false;
+        var links = this.el.find('.link');
+        links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown);
+
+        var submenu = this.el.find('.submenu li');
+        submenu.on('click', {el: this.el, multiple: this.multiple}, this.submenudropdown);
+    };
+    Accordion.prototype.dropdown = function (e) {
+        var $el = e.data.el;
+        $this = $(this);
+        $next = $this.next();
+        // 首先关闭所有的效果
+        $el.find('.submenu').not($next).slideUp();
+        $el.find('.submenu li').removeClass('check');
+        $el.find('.link').removeClass('open');
+        // 没有孩子
+        if ($next.length === 0) {
+            $this.toggleClass('open');
+        } else { // 有孩子
+            $next.slideToggle();
+            $next.find('li:first').addClass('check');
+            $next.find('li:first').click();
+        }
+    };
+    Accordion.prototype.submenudropdown = function (e) {
+        var $el = e.data.el;
+        $this = $(this);
+
+        // 首先关闭所有的效果
+        $this.siblings().removeClass('check');
+
+        // 没有孩子
+        $this.addClass('check');
+
+    };
+    var accordion = new Accordion($('#accordion'), false);
+});
+var menuPosition = 0;
+
+function FloatMenu() {
+    var animationSpeed = 1000;
+    var animationEasing = 'easeOutQuint';
+    var scrollAmount = $(document).scrollTop();
+    var newPosition = scrollAmount + 100;
+    if (scrollAmount > (menuPosition - 70)) {
+        $('#fl_menu').stop().animate({top: newPosition}, animationSpeed, animationEasing);
+    } else {
+        $('#fl_menu').stop().animate({top: menuPosition}, animationSpeed, animationEasing);
+    }
+}
+
+$(window).load(function () {
+    menuPosition = $('#fl_menu').position().top;
+    FloatMenu();
+});
+$(window).scroll(function () {
+    FloatMenu();
+});

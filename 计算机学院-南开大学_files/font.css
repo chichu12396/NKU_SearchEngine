@@ -1,0 +1,62 @@
+.title-1 {
+    font-size: 26px;
+    margin: 10px 0 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/*类似于 联系我们->学院领导*/
+.title-2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 10px 4%;
+}
+
+/*居中小号字体*/
+.title-3 {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.text {
+    font-size: 17px;
+    line-height: 35px;
+}
+
+.paragraph {
+    text-indent: 35px;
+    margin: 10px 5px;
+}
+
+/*小标题*/
+
+.text h3 {
+    font-size: 20px;
+    margin: 25px 10px 20px;
+    font-weight: 600;
+}
+
+.text h4 {
+    font-size: 17px;
+    margin: 10px 5px;
+    font-weight: 600;
+}
+
+.text h5 {
+    font-size: 17px;
+    text-indent: 35px;
+    margin: 15px 5px 0px;
+}
+
+.text p {
+    text-indent: 35px;
+    margin: 10px 5px;
+}
+
+.important {
+    font-size: 20px;
+    text-align: left;
+    color: red;
+}

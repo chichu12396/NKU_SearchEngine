@@ -1,0 +1,23 @@
+.actGotop {
+    position: fixed;
+    bottom: 100px;
+    right: 5%;
+    width: 85px;
+    height: 100px;
+    display: none;
+}
+
+.actGotop a, .actGotop a:link {
+    width: 85px;
+    height: 100px;
+    display: inline-block;
+    background: url(../images/backToTop.png) no-repeat;
+    background-size: contain;
+    outline: none;
+}
+
+.actGotop a:hover {
+    background: url(../images/backToTop.gif) no-repeat;
+    background-size: contain;
+    outline: none;
+}

@@ -1,0 +1,388 @@
+:root {
+    /*全局首页的基调背景颜色*/
+    --base-background-color: rgb(128, 0, 102);
+    /*全局基调字体颜色*/
+    --base-font-clolor: #FFFFFF;
+    /*全局正文字体大小*/
+    --base-font-size-small: 15px;
+    /*首页的margin宽度*/
+    --base-margin-width: 12%;
+    --base-laptop-margin-width: 4%;
+    --base-phone-margin-width: 3%;
+    --header-margin: 60px;
+    /*基调颜色*/
+    --base-color: rgb(5, 76, 118);
+}
+
+html,
+body {
+    background-color: white;
+    /*height: 100%;*/
+    /*background-image: url(../../statics/images/headers/back.png);*/
+    /*!*background-size: cover;*!*/
+    /*filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod='scale')";*/
+    /*-moz-background-size: 100% 100%;*/
+    /*background-size: 100% 100%;*/
+    /*background-attachment: fixed;*/
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.content {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+.header-margin-img {
+    margin-top: 60px;
+}
+
+#margin {
+    padding-left: 15px;
+}
+
+/*.pageHead2{*/
+
+/*margin-left: var(--base-margin-width);*/
+
+/*margin-right: var(--base-margin-width);*/
+
+/*}*/
+
+.wrap > .container {
+    padding: 70px 15px 20px;
+}
+
+.top-header {
+    height: 60px;
+    background: rgb(5, 76, 118);
+    background: -webkit-linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* 标准的语法 */
+    display: block;
+}
+
+.top-header-img {
+    height: auto;
+    width: auto;
+}
+
+.top-header-img-left {
+    float: left;
+    margin-left: 20px;
+    margin-top: 7px;
+    max-height: 46px;
+}
+
+.top-header-img-right {
+    float: right;
+    margin-right: 20px;
+    margin-top: 12px;
+    max-height: 36px;
+}
+
+.footer {
+    height: 60px;
+    text-align: center;
+    background: rgb(5, 76, 118);
+    background: -webkit-linear-gradient(rgb(10, 138, 211), rgb(5, 76, 118));
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgb(10, 138, 211), rgb(5, 76, 118));
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgb(10, 138, 211), rgb(5, 76, 118));
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgb(10, 138, 211), rgb(5, 76, 118));
+    /* 标准的语法 */
+    color: #FFFFFF;
+    font-size: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.back-color {
+    background: rgb(5, 76, 118);
+    background: -webkit-linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* Firefox 3.6 - 15 */
+    background: linear-gradient(rgb(5, 76, 118), rgb(10, 138, 211));
+    /* 标准的语法 */
+}
+
+a.list-group-item {
+    color: black;
+}
+
+.back-color a,
+.back-color p {
+    color: rgb(26, 25, 25);
+}
+
+#nav {
+    border-color: rgb(5, 76, 118);
+}
+
+#nav li.home-nav-margin > a {
+    color: white
+}
+
+#nav ul.dropdown-menu a {
+    color: rgb(5, 76, 118);
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+
+a.asc:after,
+a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: "\e151";
+}
+
+a.desc:after {
+    content: "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view td {
+    white-space: nowrap;
+}
+
+.grid-view .filters input,
+.grid-view .filters select {
+    min-width: 50px;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.important {
+    color: red;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/* align the logout "link" (button in form) of the navbar */
+
+.nav li > form > button.logout {
+    padding: 15px;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .nav li > form > button.logout {
+        display: block;
+        text-align: left;
+        width: 100%;
+        padding: 10px 15px;
+    }
+}
+
+.nav > li > form > button.logout:focus,
+.nav > li > form > button.logout:hover {
+    text-decoration: none;
+}
+
+.list-group-item {
+    opacity: 0.9;
+    background-color: transparent;
+}
+
+.navbar,
+.list-group-item,
+.form-group,
+.list-group {
+    margin-bottom: 0;
+}
+
+.hit {
+    background-color: rgb(30, 91, 141);
+    padding: 10px 5px;
+    color: white;
+    left: 6px;
+    position: fixed;
+    bottom: 80px;
+    font-size: 18px;
+    width: 180px;
+    text-align: center;
+}
+
+.hit-font {
+    font-size: 17px;
+    line-height: 25px;
+    text-indent: 35px;
+    margin: 5px;
+}
+
+.hit-important {
+    color: red;
+}
+
+.navbar-nav {
+    font-weight: bold;
+    font-size: 16px;
+    float: inherit;
+}
+
+.dropdown:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+.dropdown:hover .caret {
+    color: #000000;
+    transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -o-transition: all 0.4s ease-in-out 0s;
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    font-size: 140px;
+    opacity: 0.2;
+}
+
+.btn-primary {
+    background-color: rgb(234, 234, 234);
+}
+
+.font-no-newline {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.navbar .nav > li:hover .dropdown-menu {
+    display: block;
+    background: rgba(234, 234, 234, 0.95);
+}
+
+#nav .nav > li:hover > a {
+    color: rgb(5, 76, 118);
+}
+
+.dropdown-menu > li {
+    margin: 5px 0px;
+}
+
+.dropdown-menu .divider.divider {
+    background-color: #404040;
+}
+
+.nav > li > form > button.logout:focus {
+    outline: none;
+}
+
+@media only screen and (min-width: 4096px) {
+    body {
+        height: auto;
+        width: 4096px;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .content {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+}
+
+/*自定义  pad 手机端 内容的margin变小*/
+
+@media only screen and (max-width: 1024px) {
+    .content {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+.base-copyright {
+    margin: 0;
+}
+
+/*手机端 414 6p*/
+
+@media only screen and (max-width: 767px) {
+    .top-header {
+        height: 40px;
+    }
+
+    .top-header-img-left {
+        float: left;
+        margin-left: 6px;
+        margin-top: 7px;
+        max-height: 26px;
+    }
+
+    .top-header-img-right {
+        float: right;
+        margin-right: 6px;
+        margin-top: 12px;
+        max-height: 16px;
+    }
+
+    .header-margin-img {
+        margin-top: 40px;
+    }
+}
